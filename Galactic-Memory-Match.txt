@@ -1,0 +1,53 @@
+jag vill förbereda mig inför 2 dagars Galactic Memory Match!
+
+då behöver jag
+ - bestämma mig om arkitektur
+ - bestämma "scope"
+
+enda gången jag lyckats göra klart (=spelbart enligt användares förväntningar) är när jag skrev reglerna först i Duel.
+
+kanske kan jag göra det idag?
+
+GMM
+---
+
+Galactic Memory Match är ett traditionellt Memory-spel med en twist: korten ligger inte alltid stilla!
+
+Så förutom att hålla reda på var saker ligger, behöver man stoppa rymdskepp som kommer och försöker störa ordningen på korten.
+
+Detta gör man genom att avfyra kanoner från spelplanens sida vid rätt tillfälle, lite som Missile Defender / Global Defence, fast enklare (inget sikte - klicka på avfyra på någon av de tillgängliga kanonerna vid rätt tillfälle.)
+
+Om man inte hinner skjuta ned "flyttaren" så byter den plats på två intillliggande kort, genom att lyfta dem bägge samtidigt.
+
+Det finns lika många kanoner som rader i spelet, och de ligger till vänster om korten. Rymdskepp som kommer in horisontellt är
+lättare bekämpa, eftersom det räcker att avfyra rätt kanon i höjdled. Rymdskepp som kommer in vertikalt däremot, behöver träffas
+mera exakt i tiden. De kommer senare.
+
+
+Arkitektur
+----------
+
+Jag skulle kunna släppa Event Sourcing här (det gör jag i Lean Machine Sim) och köra med en arkitektur jag kan och vet fungerar väl:
+TEA. 
+
+Händelser:
+  - klick på kanon N
+  - klick på kort (x,y)
+  - tick (100 ggr / sekund t.ex.)
+
+Rymdskeppen skulle kunna följa en förutbestämd sekvens till att börja med; jag kan göra det random senare. Och dessutom kan det ses
+som en "feature" i ett minnesspel att det är statiskt!
+
+Kanonerna skulle kunna avfyras hur mycket som helst till att börja med; avsvalning i nästa milstolpe.
+
+Jag vill definitivt ha ljudeffekter, så det behöver jag researcha i typescript-react. Update: det var bajsenkelt, redan lärt mig:
+   new Audio(wavAsset).play()
+
+
+
+
+
+
+
+
+
