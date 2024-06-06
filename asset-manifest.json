@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/galactic-memory-match/static/css/main.f855e6bc.css",
-    "main.js": "/galactic-memory-match/static/js/main.244f7425.js",
+    "main.js": "/galactic-memory-match/static/js/main.1d2bc631.js",
     "static/js/453.43154e0b.chunk.js": "/galactic-memory-match/static/js/453.43154e0b.chunk.js",
-    "static/media/logo.svg": "/galactic-memory-match/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/galactic-memory-match/index.html",
     "main.f855e6bc.css.map": "/galactic-memory-match/static/css/main.f855e6bc.css.map",
-    "main.244f7425.js.map": "/galactic-memory-match/static/js/main.244f7425.js.map",
+    "main.1d2bc631.js.map": "/galactic-memory-match/static/js/main.1d2bc631.js.map",
     "453.43154e0b.chunk.js.map": "/galactic-memory-match/static/js/453.43154e0b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.244f7425.js"
+    "static/js/main.1d2bc631.js"
   ]
 }
