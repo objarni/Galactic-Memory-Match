@@ -12,19 +12,24 @@ console.log("Scale factor (sci-fi): ", sf)
 function Sprite(props: { image: string, pos: { x: number; y: number }, scale: number }) {
     const style: React.CSSProperties = {
         position: 'absolute',
-        left: props.pos.x * props.scale * 10,
+        left: props.pos.x * props.scale,
         top: props.pos.y * props.scale,
-        transform: `scale(${props.scale})`
+        transform: `scale(${props.scale})`,
+        transformOrigin: 'top left'
     };
     return <img src={props.image} alt="" style={style}/>
 }
 
 function App() {
-    const p = {x: 2, y: 100}
+    const p1 = {x: 0, y: 0}
+    const p2 = {x: 100, y: 100}
+    const p3 = {x: 200, y: 200}
     return (
         <div className="App">
-            <Card text={"A"} scale={sf}/>
-            <Sprite image={Image} pos={p} scale={sf}/>
+            <Card text={"A"} pos={p3} scale={sf}/>
+            <Sprite image={Image} pos={p1} scale={sf}/>
+            <Sprite image={Image} pos={p2} scale={sf}/>
+            <Sprite image={Image} pos={p3} scale={sf}/>
         </div>
     );
 }
